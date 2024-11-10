@@ -30,7 +30,11 @@ class DataManager:
 def get_data(args, logger):
     
     # 데이터 경로를 만들어 줌 (예: "./data/MIntRec")
-    data_path = os.path.join(args.data_path, args.dataset)
+    #base_path = os.path.dirname(__file__)
+    data_path = os.path.abspath(os.path.join('/home/gitiresearch/TCL-MAP/'+ args.data_path, args.dataset))
+    #print(f"Base path: {base_path}")
+    print(f"Data path: {data_path}")
+
 
     # 불러올 데이터셋에 대한 정보를 가져옴 (벤치마크에서 데이터셋 정보 가져오기)
     bm = benchmarks[args.dataset]

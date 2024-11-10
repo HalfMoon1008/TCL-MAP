@@ -9,7 +9,7 @@ import os
 import datetime
 import itertools  # 반복을 위한 모듈
 import warnings
-import copy 
+import copy
 
 # 커맨드라인에서 받을 인자들을 정의해주는 함수
 def parse_arguments():
